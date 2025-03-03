@@ -1,0 +1,20 @@
+.wrapper {
+  width: 100%;
+  background: #fafafa;
+  box-sizing: border-box;
+  height: calc(100vh - 80px);
+}
+
+h1 {
+  font-size: 26px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  line-height: 31.69px;
+  color: #222222;
+  padding: 41px 48px 0 48px;
+}
+
+.container {
+  padding: 0 48px;
+  height: 100%;
+}

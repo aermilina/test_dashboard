@@ -1,0 +1,29 @@
+.placeholderContainer {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
+  min-height: 300px;
+  padding-top: 100px;
+}
+
+.placeholderText {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21.94px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.placeholderBtn {
+  background: #2ee5ac;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 30px;
+  text-align: center;
+  border: none;
+  color: #fff;
+  padding: 0 30px;
+}

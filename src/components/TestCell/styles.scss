@@ -1,0 +1,38 @@
+.cell {
+  flex-shrink: 0;
+  text-align: left;
+  width: var(--width, auto);
+  font-size: var(--font-size, 12px);
+  font-weight: var(--font-weight, 400);
+  color: var(--color, #5c5c5c);
+  margin: 0 25px;
+
+  &:nth-child(5) {
+    flex-grow: 1;
+  }
+}
+
+.btn {
+  padding: 0 20px;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 10px;
+  line-height: 35px;
+
+  &.results {
+    background: #2ee5ac;
+    font-weight: 600;
+    color: white;
+  }
+
+  &.finalize {
+    background: #7d7d7d;
+    font-weight: 500;
+    color: white;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

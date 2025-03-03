@@ -1,0 +1,45 @@
+.inputContainer {
+  position: relative;
+  margin-bottom: 30px;
+  margin-top: 40px;
+  &::before {
+    content: "";
+    width: 13px;
+    height: 14px;
+    background: url("../../assets/searchIco.svg") no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    left: 11px;
+    transform: translateY(-50%);
+  }
+}
+
+.search {
+  border: 1px solid #ebebeb;
+  border-radius: 15px;
+  background: #fff;
+  width: 100%;
+  padding: 10px 0 10px 37px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22.5px;
+  box-sizing: border-box;
+
+  &::placeholder {
+    color: #d1d1d1;
+  }
+}
+
+.count {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22.5px;
+  box-sizing: border-box;
+  color: #d1d1d1;
+  position: absolute;
+  right: 11px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+}
