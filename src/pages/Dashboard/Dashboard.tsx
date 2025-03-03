@@ -28,7 +28,6 @@ const Dashboard = () => {
   return (
     <Layout title="Dashboard">
       <Search
-        search={search}
         setSearch={setSearch}
         searchCount={sortedTests.length}
         inputValue={inputValue}
