@@ -23,6 +23,7 @@ export default function TestRow({ test, index, sites }: Props) {
   const style = {
     "--background": backgroundColor,
   } as React.CSSProperties;
+
   return (
     <div key={id} className="row">
       <div className="delimeter" style={style} />

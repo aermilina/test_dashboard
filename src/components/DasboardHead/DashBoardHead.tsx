@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React from "react";
 import TestCell from "../TestCell";
 import { Test } from "../../types";
 import "./styles.scss";
@@ -18,15 +18,10 @@ export default function DashboardHead({
   const widths = [389, 100, 62, 117];
   const keys: Array<keyof Test> = ["name", "type", "status", "siteId"];
 
-  const handleSort = useCallback(
-    (key: keyof Test) => {
-      setSortKey(key);
-      setSortOrder((prevOrder: string) =>
-        prevOrder === "asc" ? "desc" : "asc",
-      );
-    },
-    [setSortKey, setSortOrder],
-  );
+  const handleSort = (key: keyof Test) => {
+    setSortKey(key);
+    setSortOrder((prevOrder: string) => (prevOrder === "asc" ? "desc" : "asc"));
+  };
 
   return (
     <div className="header">

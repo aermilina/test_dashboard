@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { Test } from "../../types/";
 import { useTests, useSites, useFilterTests, useSortTests } from "../../hooks";
 import {
@@ -25,6 +25,11 @@ const Dashboard = () => {
     sites,
   );
 
+  const handleReset = useCallback(() => {
+    setSearch("");
+    setInputValue("");
+  }, [setSearch, setInputValue]);
+
   return (
     <Layout title="Dashboard">
       <Search
@@ -46,9 +51,7 @@ const Dashboard = () => {
           ))}
         </div>
       )}
-      {sortedTests.length === 0 && (
-        <Placeholder setSearch={setSearch} setInputValue={setInputValue} />
-      )}
+      {sortedTests.length === 0 && <Placeholder onReset={handleReset} />}
     </Layout>
   );
 };

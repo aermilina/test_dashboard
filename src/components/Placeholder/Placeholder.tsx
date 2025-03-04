@@ -1,22 +1,15 @@
 import "./styled.scss";
 
 interface Props {
-  setSearch: (value: string) => void;
-  setInputValue: (value: string) => void;
+  onReset: () => void;
 }
-export default function Placeholder({ setSearch, setInputValue }: Props) {
+export default function Placeholder({ onReset }: Props) {
   return (
     <div className="placeholderContainer">
       <div className="placeholderText">
         Your search did not match any results.
       </div>
-      <button
-        className="placeholderBtn"
-        onClick={() => {
-          setSearch("");
-          setInputValue("");
-        }}
-      >
+      <button className="placeholderBtn" onClick={onReset}>
         Reset
       </button>
     </div>

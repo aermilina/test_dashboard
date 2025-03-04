@@ -5,6 +5,7 @@ import { BASE_API_URL } from "../constants";
 
 export default function useSites() {
   const [sites, setSites] = useState<Site[]>([]);
+
   const fetchTests = async (): Promise<Site[]> => {
     const response = await axios.get<Site[]>(`${BASE_API_URL}/sites`);
     const data = response?.data;
