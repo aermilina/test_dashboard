@@ -37,6 +37,7 @@ export default [
         { allowConstantExport: true },
       ],
       "prettier/prettier": "error",
+      "no-console": "warn",
     },
   },
 ];

@@ -36,6 +36,13 @@ export default function Search({
     [debounceTimeout, setSearch, setInputValue],
   );
 
+  const handleSearchKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "Escape") {
+      setSearch(""); // clear search on Escape key
+      setInputValue(""); // clear input value as well
+    }
+  };
+
   useEffect(() => {
     return () => {
       if (debounceTimeout) {
@@ -52,6 +59,7 @@ export default function Search({
         type="text"
         placeholder="What tests are you looking for?"
         onChange={handleSearchChange}
+        onKeyDown={handleSearchKeyDown}
       />
       <span className="count">{searchCount} tests</span>
     </div>
